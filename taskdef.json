@@ -1,21 +1,26 @@
 {
-	"containerDefinitions": [{
-		"essential": true,
-		"name": "tomcat",
-		"image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/tomcat:0.0.1",
-		"memory": 256,
-		"cpu": 512,
-		"portMappings": [
-                {
-                    "hostPort": 80,
-                    "containerPort": 8080,
-                    "protocol": "tcp"
-                }
-                               ]
-		       
-	}],
-
-	"family": "tomcat",
-	"taskRoleArn": "arn:aws:iam::466749146115:role/Prem-role"
-  
- }
+  "containerDefinitions": [
+    {
+        
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "protocol": "tcp",
+          "containerPort": 8080
+        }
+      ],
+      "cpu": 1024,
+      "memory": 256,
+      "image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/tomcat:0.0.1",
+      "essential": true,
+      "name": "tomcat"
+    }
+  ],
+  "requiresCompatibilities": [
+      "FARGATE"
+   ], 
+  "memory": "2048",
+  "family": "tomcat",
+  "networkMode": "awsvpc",
+  "cpu": "1024"
+}
