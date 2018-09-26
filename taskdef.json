@@ -16,7 +16,6 @@
 	}],
 
 	"family": "tomcat",
-	"networkMode": "host",
 	"taskRoleArn": "arn:aws:iam::466749146115:role/Prem-role"
   
  }
