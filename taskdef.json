@@ -1,26 +1,12 @@
 {
-  "containerDefinitions": [
-    {
-        
-      "portMappings": [
-        {
-          "hostPort": 80,
-          "protocol": "tcp",
-          "containerPort": 8080
-        }
-      ],
-      "cpu": 1024,
-      "memory": 256,
-      "image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/tomcat:0.0.1",
-      "essential": true,
-      "name": "tomcat"
-    }
-  ],
-  "requiresCompatibilities": [
-      "FARGATE"
-   ], 
-  "memory": "2048",
-  "family": "tomcat",
-  "networkMode": "awsvpc",
-  "cpu": "1024"
+	"networkMode": "host",
+	"containerDefinitions": [{
+		"essential": true,
+		"name": "tomcat",
+		"image": "466749146115.dkr.ecr.ap-south-1.amazonaws.com/tomcat:0.0.1",
+		"memory": 2048,
+		"cpu": 1024
+	}],
+
+	"family": "tomcat"
 }
