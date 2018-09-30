@@ -10,6 +10,6 @@
 
 	"family": "prem",
 	"networkMode": "host",
-	"taskRoleArn": "arn:aws:iam::466749146115:role/ECSEC2JensinsRole"
+	"taskRoleArn": "arn:aws:iam::466749146115:role/ecsRole"
   
  }
