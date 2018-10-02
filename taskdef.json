@@ -9,6 +9,6 @@
 	}],
 
 	"family": "prem",
-	"networkMode": "host",
+	"networkMode": "host"
 	
  }
